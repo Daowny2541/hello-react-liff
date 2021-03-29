@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header'
+import ProfileLiff from './ProfileLiff'
 
 const liff = window.liff;  
 
@@ -22,6 +23,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <ProfileLiff />
     </div>
   );
 }
