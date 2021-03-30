@@ -23,7 +23,7 @@ function App() {
           Learn React
         </a>
       </header>
-      {/* <ProfileLiff /> */}
+      <ProfileLiff />
     </div>
   );
 }
