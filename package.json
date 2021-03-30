@@ -2,7 +2,7 @@
   "name": "hello-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://daowny2541.github.io/liff-staff-pay-slip/",
+  "homepage": "https://daowny2541.github.io/liff-taywin/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",
