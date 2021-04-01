@@ -51,12 +51,12 @@ class ProfileLiff extends Component {
             return (
                 <div>
                     <div style={{height:'20px'}}/>
+                    <img alt='logo' src={this.state.pictureUrl} className='App-img-circle'/>
                     <p className="App-intro">
                     Display Name : {this.state.displayName} <br/>
                     User ID : {this.state.userId} <br/>
                     Status Msg : {this.state.statusMessage}
                     </p>
-                    <img alt='pic' src={this.state.pictureUrl} />
                     {/* <Button color="primary" onClick={this.closeApp}>Close</Button> */}
                 </div>
             );
