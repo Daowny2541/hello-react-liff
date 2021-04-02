@@ -45,17 +45,17 @@ class ProfileLiff extends Component {
         }else{
             liff.login();
         }
-        }
+      }
 
         render() {
             return (
                 <div>
                     <div style={{height:'20px'}}/>
-                    <img alt='logo' src={this.state.pictureUrl} className='App-img-circle'/>
-                    <p className="App-intro">
-                    Display Name : {this.state.displayName} <br/>
-                    User ID : {this.state.userId} <br/>
-                    Status Msg : {this.state.statusMessage}
+                    <p className="App-header">
+                        <img alt='logo' src={this.state.pictureUrl} className='App-img-circle'/>
+                        Display Name : {this.state.displayName} <br/>
+                        User ID : {this.state.userId} <br/>
+                        Status Msg : {this.state.statusMessage}
                     </p>
                     {/* <Button color="primary" onClick={this.closeApp}>Close</Button> */}
                 </div>

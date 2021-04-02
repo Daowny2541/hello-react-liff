@@ -1,30 +1,64 @@
+import React, { useState } from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText,
+  Form,
+  FormText
+} from 'reactstrap';
+import {LinkContainer} from 'react-router-bootstrap';
 import logo from './logo.svg';
 import './App.css';
-import Header from './Header'
-import ProfileLiff from './ProfileLiff'
 
 const liff = window.liff;  
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
-    <div className="App">
-      <Header />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welocome to React.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <ProfileLiff />
-    </div>
+    <div>
+     <Navbar color="light" light expand="md">
+      {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
+      <NavbarBrand href="#home">
+    <img
+      alt=""
+      src={logo}
+      width="30"
+      height="30"
+      className="d-inline-block align-top"
+    />{' '}
+    Staff Pay slip
+  </NavbarBrand>
+      <NavbarToggler onClick={toggle} />
+      <Collapse isOpen={isOpen} navbar>
+        <Nav className="mr-auto" navbar>
+          <LinkContainer to="/home">
+              <NavLink>Home</NavLink>
+          </LinkContainer>
+          <NavItem>
+            <NavLink href="https://line.me">Open Window</NavLink>
+          </NavItem>
+          <LinkContainer to="/about">
+              <NavLink>About</NavLink>
+          </LinkContainer>
+        </Nav>
+        <LinkContainer to="/profileLiff">
+            <NavLink>Logout</NavLink>
+        </LinkContainer>
+      </Collapse>
+    </Navbar>
+  </div>
   );
 }
 
