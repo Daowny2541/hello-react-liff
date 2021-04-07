@@ -31,7 +31,7 @@ function App() {
     <div>
       <Navbar color="light" light expand="md">
         {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
-        <NavbarBrand href="/profileLiff" className="App">
+        <NavbarBrand href="/" className="App">
           <img
             alt=""
             src={logo}
@@ -44,7 +44,7 @@ function App() {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <LinkContainer to="/">
+            <LinkContainer to="/home">
               <NavLink>Home</NavLink>
             </LinkContainer>
             <NavItem>
@@ -54,7 +54,7 @@ function App() {
               <NavLink>About</NavLink>
             </LinkContainer>
           </Nav>
-          <LinkContainer to="/profileLiff">
+          <LinkContainer to="/">
             <NavLink>Logout</NavLink>
           </LinkContainer>
         </Collapse>

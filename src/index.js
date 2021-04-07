@@ -14,9 +14,9 @@ ReactDOM.render(
     <Router>
       <App />
       <Switch>
-        <Route path="/profileLiff" component={ProfileLiff} />
+        <Route path="/" component={ProfileLiff} />
         <Route path="/about" component={About} />
-        <Route path="/" component={Home} />
+        <Route path="/home" component={Home} />
       </Switch>
     </Router>
   </React.StrictMode>,
