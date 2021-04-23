@@ -18,7 +18,6 @@ import {
 import { LinkContainer } from "react-router-bootstrap";
 import logo from "./drawable/logo.svg";
 import "./App.css";
-import ProfileLiff from "./page/ProfileLiff";
 
 const liff = window.liff;
 
@@ -31,7 +30,7 @@ function App() {
     <div>
       <Navbar color="light" light expand="md">
         {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
-        <NavbarBrand href="/" className="App">
+        <NavbarBrand href="/home" className="App">
           <img
             alt=""
             src={logo}
@@ -44,19 +43,25 @@ function App() {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <LinkContainer to="/home">
-              <NavLink>Home</NavLink>
-            </LinkContainer>
+          <NavItem>
+              <NavLink href="/home">Home</NavLink>
+            </NavItem>
             <NavItem>
               <NavLink href="https://line.me">Open Window</NavLink>
             </NavItem>
-            <LinkContainer to="/about">
+            <NavItem>
+              <NavLink href="/about">About</NavLink>
+            </NavItem>
+            {/* <LinkContainer to="/about">
               <NavLink>About</NavLink>
-            </LinkContainer>
+            </LinkContainer> */}
           </Nav>
-          <LinkContainer to="/">
+          {/* <LinkContainer to="/home">
             <NavLink>Logout</NavLink>
-          </LinkContainer>
+          </LinkContainer> */}
+            <NavItem>
+              <NavLink href="/profile">Logout</NavLink>
+            </NavItem>
         </Collapse>
       </Navbar>
     </div>

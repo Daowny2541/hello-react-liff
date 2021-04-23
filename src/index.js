@@ -12,9 +12,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App />
+     <App />
       <Switch>
-        <Route path="/" component={ProfileLiff} />
+        <Route path="/profile" component={ProfileLiff} />
         <Route path="/about" component={About} />
         <Route path="/home" component={Home} />
       </Switch>
