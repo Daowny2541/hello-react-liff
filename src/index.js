@@ -6,6 +6,7 @@ import App from "./App";
 import ProfileLiff from "./page/ProfileLiff";
 import About from "./page/About";
 import Home from "./page/Home";
+import Login from "./page/Login"
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -15,7 +16,7 @@ ReactDOM.render(
      <App />
       <Switch>
         <Route path="/liff" component={ProfileLiff} />
-        <Route path="/profile" component={ProfileLiff} />
+        <Route path="/profile" component={Login} />
         <Route path="/about" component={About} />
         <Route path="/home" component={Home} />
       </Switch>
