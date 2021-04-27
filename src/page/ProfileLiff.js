@@ -9,6 +9,7 @@ class ProfileLiff extends Component {
       userId: "",
       pictureUrl: "",
       statusMessage: "",
+      email: "",
     };
     this.initialize = this.initialize.bind(this);
     this.closeApp = this.closeApp.bind(this);
@@ -38,14 +39,13 @@ class ProfileLiff extends Component {
     });
     if (liff.isLoggedIn()) {
       let profile = await liff.getProfile();
+      let getEmail = await liff.getDecodedIDToken();
       this.setState({
-        //   name: getProfile.displayName,
-        //   userLineID: getProfile.userId,
-        //   pictureUrl: getProfile.pictureUrl,
         displayName: profile.displayName,
         userId: profile.userId,
         pictureUrl: profile.pictureUrl,
         statusMessage: profile.statusMessage,
+        email: getEmail.email,
       });
     } else {
       liff.login();
@@ -63,8 +63,9 @@ class ProfileLiff extends Component {
             className="App-img-circle"
           />
           Display Name : {this.state.displayName} <br />
-          User ID : {this.state.userId} <br />
-          Status Msg : {this.state.statusMessage}
+          {/* User ID : {this.state.userId} <br /> */}
+          Status Msg : {this.state.statusMessage} <br/>
+          email : {this.state.email}
         </p>
         {/* <Button color="primary" onClick={this.closeApp}>Close</Button> */}
       </div>

@@ -14,6 +14,7 @@ ReactDOM.render(
     <Router>
      <App />
       <Switch>
+        <Route path="/liff" component={ProfileLiff} />
         <Route path="/profile" component={ProfileLiff} />
         <Route path="/about" component={About} />
         <Route path="/home" component={Home} />

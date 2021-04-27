@@ -29,8 +29,7 @@ function App() {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        {/* <NavbarBrand href="/">reactstrap</NavbarBrand> */}
-        <NavbarBrand href="/home" className="App">
+        <NavbarBrand href="/liff" className="App">
           <img
             alt=""
             src={logo}
@@ -52,13 +51,7 @@ function App() {
             <NavItem>
               <NavLink href="/about">About</NavLink>
             </NavItem>
-            {/* <LinkContainer to="/about">
-              <NavLink>About</NavLink>
-            </LinkContainer> */}
           </Nav>
-          {/* <LinkContainer to="/home">
-            <NavLink>Logout</NavLink>
-          </LinkContainer> */}
             <NavItem>
               <NavLink href="/profile">Logout</NavLink>
             </NavItem>
